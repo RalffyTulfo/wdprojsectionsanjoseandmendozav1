@@ -20,18 +20,31 @@ to this section's matching END comment to see page-specific styles.
 }
 h1
 {
+  font-size: 80px;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  top: 75px;
+  text-align: center;
   color: #f1ede9;
   font-family: 'Roca One', sans-serif;
+  border: 2px solid green;
 }
 /* Basic page style resets */
 nav {
         position: relative;
-        left: 176.3px;
+        padding: 100px;
+        top: 265px;
         width: 300px;
         border: 2px solid green;
         padding: 50px;
         margin: 20px;
         }
+section
+{
+  position: relative;
+  top: 1000px;
+}
 * {
   box-sizing: border-box;
 }
