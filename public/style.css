@@ -40,14 +40,17 @@ nav {
         padding: 50px;
         margin: 20px;
         }
-.albums
+.albums, .sources
 {
   float: right;
+  clear: right;
 }
-.sources
+.bio, .disco
 {
-  float: right;
+  float: left;
+  clear: left;
 }
+
 section
 {
   position: relative;
