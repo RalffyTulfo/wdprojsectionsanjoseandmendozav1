@@ -102,10 +102,12 @@ footer>p
   top: 0px; 
   left: 0px; 
   transform-origin: 0px 0px; 
-  height: 737.089px; 
-  width: 1310.38px; 
+  height: 100%; 
+  width: 100%; 
   pointer-events: none; 
   transform: scale(0.486458);
+  mix-blend-mode: multiply;
+  
 }
 [hidden] {
   display: none !important;
