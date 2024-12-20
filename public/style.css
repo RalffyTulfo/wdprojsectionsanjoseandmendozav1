@@ -24,7 +24,7 @@ h1
   margin: auto;
   width: 100%;
   position: relative;
-  top: 75px;
+  top: 100px;
   text-align: center;
   color: #f1ede9;
   font-family: 'Roca One', sans-serif;
@@ -33,13 +33,16 @@ h1
 /* Basic page style resets */
 nav {
         position: relative;
-        padding: 175px;
         top: 200px;
         width: 30%;
         border: 2px solid green;
         padding: 50px;
-        margin: 20px;
-  text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 2%;
+        font-size: 30px;
+        text-align: justify;
+        
         }
 a{
   text-decoration: none;
@@ -63,11 +66,15 @@ a:link{
 
 section
 {
-  position: relative;
-  top: 1000px;
+  position: absolute;
+  top:800px;
+  bottom: auto;
 }
 * {
   box-sizing: border-box;
+}
+footer>p{
+  font-size: 10px;
 }
 [hidden] {
   display: none !important;
