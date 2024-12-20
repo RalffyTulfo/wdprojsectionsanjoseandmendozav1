@@ -20,7 +20,7 @@ to this section's matching END comment to see page-specific styles.
 }
 h1
 {
-  font-size: 80px;
+  font-size: 160px;
   margin: auto;
   width: 100%;
   position: relative;
@@ -67,7 +67,7 @@ a:link{
   transform: scale(1,1);
   position:absolute;
   width: 50%;
-  margin: 10% 15%;
+  margin: -47px 15% 10px;
   z-index: 10;
 }
 footer>p
