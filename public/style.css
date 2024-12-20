@@ -27,15 +27,15 @@ h1
   top: 100px;
   text-align: center;
   color: #f1ede9;
-  font-family: 'Roca One', sans-serif;
-  border: 2px solid green;
+  font-family: 'Courier', sans-serif;
 }
 /* Basic page style resets */
 nav {
   position: relative; /* Allows z-index control */
   top: 200px;
   width: 25%;
-  border: 2px solid green;
+  border-radius: 25px;
+  border: 2px solid #f1ede9;
   padding: 50px;
   margin-left: 10%;
   margin-right: 10%;
@@ -43,7 +43,8 @@ nav {
   font-size: 30px;
   text-align: justify;
   z-index: 1; 
-  background-color: #f1ede9;/* Lower index places it 
+  background-color: #f1ede9;
+  opacity: 0.7;/* Lower index places it 
   behind */
 }
 nav a {
@@ -74,12 +75,12 @@ a:link{
   clear: left;
 }
 .Bruno{
-   position: absolute; /* Keep the image positioned */
+  position: absolute; /* Keep the image positioned */
   z-index: 1; /* Place it below clickable text */
   width: auto; /* Adjust width */
   height: 750px; /* Control the height */
   object-fit: cover; /* Ensures cropping fits the area */
-  top: 750; /* Align image to the top */
+  top: 138px; /* Align image to the top */
   left: 40%; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust centering */ 
 }
@@ -92,7 +93,6 @@ footer>p
 {
   position: absolute;
   top:800px;
-  bottom: auto;
   font-size:10px
 }
 * {
@@ -100,12 +100,11 @@ footer>p
 }
 
 .bimage1{
-  position: absolute;
-  margin-left: 75%;
-  margin-top: 50%;
-  width: 10%;
+  position: relative;
+  top: 100px;  
+  left: 675px;
   transform: scale(0.5,0.5);
-  z-index: 3;
+  z-index: 1;
 }
 .goback{
   position: fixed;
