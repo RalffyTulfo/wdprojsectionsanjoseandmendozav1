@@ -32,18 +32,18 @@ h1
 }
 /* Basic page style resets */
 nav {
-        position: relative;
-        top: 200px;
-        width: 30%;
-        border: 2px solid green;
-        padding: 50px;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-top: 2%;
-        font-size: 30px;
-        text-align: justify;
-        
-        }
+  position: relative; /* Allows z-index control */
+  top: 200px;
+  width: 30%;
+  border: 2px solid green;
+  padding: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  font-size: 30px;
+  text-align: justify;
+  z-index: 1; /* Lower index places it behind */
+}
 a{
   text-decoration: none;
   
@@ -64,9 +64,10 @@ a:link{
   clear: left;
 }
 .Bruno{
-  transform: scale(,);
+  transform: scale(1,1);
   position:relative;
   width: 50%;
+  margin: 10px 15%;
 }
 footer>p
 {
