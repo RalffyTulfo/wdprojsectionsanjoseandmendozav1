@@ -98,11 +98,11 @@ footer>p
 }
 
 .bimage1{
-  position: fixed; 
+  position: absolute;
+  margin-left: 75%;
+  margin-top: 50%;
+  width: 10%;
   transform: scale(0.5,0.5);
-  bottom: 0px;       /* Align to the bottom */
-  left: 0px;
-  width: 30%;
   z-index: 3;
 }
 .goback{
