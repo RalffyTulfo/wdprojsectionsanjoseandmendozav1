@@ -34,12 +34,22 @@ h1
 nav {
         position: relative;
         padding: 175px;
-        top: 265px;
-        width: 300px;
+        top: 200px;
+        width: 30%;
         border: 2px solid green;
         padding: 50px;
         margin: 20px;
+  text-align: center;
         }
+a{
+  text-decoration: none;
+  
+}
+a:link{
+  color:black;
+  font-family:'Courier', Monospace;
+  font-weight: bold;
+}
 .albums, .sources
 {
   float: right;
