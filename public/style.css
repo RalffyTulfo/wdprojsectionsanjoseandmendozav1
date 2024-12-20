@@ -42,7 +42,9 @@ nav {
   margin-top: 2%;
   font-size: 30px;
   text-align: justify;
-  z-index: 1; /* Lower index places it behind */
+  z-index: 1; 
+  background-color: #f1ede9;/* Lower index places it 
+  behind */
 }
 nav a {
   display: block;
