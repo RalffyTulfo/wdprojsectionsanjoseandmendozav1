@@ -63,18 +63,20 @@ a:link{
   float: left;
   clear: left;
 }
-
-section
+.Bruno{
+  transform: scale(,);
+  position:relative;
+  width: 50%;
+}
+footer>p
 {
   position: absolute;
   top:800px;
   bottom: auto;
+  font-size:10px
 }
 * {
   box-sizing: border-box;
-}
-footer>p{
-  font-size: 10px;
 }
 [hidden] {
   display: none !important;
