@@ -106,8 +106,6 @@ footer>p
   width: 100%; 
   pointer-events: none; 
   transform: scale(0.486458);
-  mix-blend-mode: multiply;
-  
 }
 [hidden] {
   display: none !important;
