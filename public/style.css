@@ -40,6 +40,10 @@ nav {
         padding: 50px;
         margin: 20px;
         }
+.albums
+{
+  float: right;
+}
 section
 {
   position: relative;
