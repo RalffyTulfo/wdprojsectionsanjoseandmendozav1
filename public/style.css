@@ -42,9 +42,14 @@ nav {
   margin-top: 2%;
   font-size: 30px;
   text-align: justify;
-  z-index: 1; /* Lower index places it behind */
+  z-index: 2; /* Lower index places it behind */
 }
-a{
+nav a {
+  position: relative; /* Avoid being blocked by the image */
+  z-index: 3; /* Ensure links are clickable */
+  color: black;
+  font-family: 'Courier', Monospace;
+  font-weight: bold;
   text-decoration: none;
   
 }
@@ -64,11 +69,19 @@ a:link{
   clear: left;
 }
 .Bruno{
-  transform: scale(1,1);
-  position:absolute;
-  width: 50%;
-  margin: -47px 15% 10px;
-  z-index: 10;
+   position: absolute; /* Keep the image positioned */
+  z-index: 1; /* Place it below clickable text */
+  width: auto; /* Adjust width */
+  height: 750px; /* Control the height */
+  object-fit: cover; /* Ensures cropping fits the area */
+  top: 750; /* Align image to the top */
+  left: 40%; /* Center the image horizontally */
+  transform: translateX(-50%); /* Adjust centering */ 
+}
+.crop{
+  width: 400px;
+  height:50%;
+  overflow: hidden;
 }
 footer>p
 {
