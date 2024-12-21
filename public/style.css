@@ -80,7 +80,7 @@ a:link{
   width: auto; /* Adjust width */
   height: 750px; /* Control the height */
   object-fit: cover; /* Ensures cropping fits the area */
-  top: 138px; /* Align image to the top */
+  bottom:0px; /* Align image to the top */
   left: 40%; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust centering */ 
 }
@@ -99,17 +99,16 @@ footer>p
   box-sizing: border-box;
 }
 
-.bimage1{
-  position: relative;
-  top: 100px;  
-  left: 675px;
-  transform: scale(0.5,0.5);
-  z-index: 1;
+.image1{
+  position: fixed;
+  right:0px;
+  bottom:0px;
+  transform: scale(0.75,0.75);
 }
 .goback{
   position: fixed;
   bottom: 0px;
-  width: 75%;
+  width: 60%;
   height: 30px;
   background-color: gray;
   font-size: 20px;
