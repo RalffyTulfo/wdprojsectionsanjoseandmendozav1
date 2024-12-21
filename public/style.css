@@ -134,12 +134,15 @@ footer>p
   display: flex;
   text-decoration: none;
   justify-content: space-around;
-  max-width: 90%;
 }
 .gobacklinks{
   color:#f1ede9;
   font-family:'Courier', Monospace;
   font-weight: bold;
+  text-decoration: none;
+}
+.gobacklinks:visited{
+  color:#f1ede9;
 }
 [hidden] {
   display: none !important;
