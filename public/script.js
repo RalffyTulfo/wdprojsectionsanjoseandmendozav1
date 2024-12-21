@@ -1,6 +1,3 @@
-function includeComments() {
-  commentsHere.innerHTML += "<p>" + comments.value + "</p>";
-}
-function changeColor() {
-  
+function changeColor(color) {
+  document.body.style.backgroundColor = color;
 }
