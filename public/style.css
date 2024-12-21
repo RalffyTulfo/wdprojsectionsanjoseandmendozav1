@@ -117,11 +117,10 @@ footer>p
   left: 50px;
 }
 .image1{
-  position: fixed;
+  position: sticky;
    bottom: 0; /* Positions the image at the bottom */
   right: 0; /* Positions the image at the right */
   z-index: 1; /* Ensures the image stays above other elements */
-  max-width: 20%; /* Optional: Adjust size dynamically based on screen */
   height: auto;
   transform: scale(0.75,0.75)
 }
