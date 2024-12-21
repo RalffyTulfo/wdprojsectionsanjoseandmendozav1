@@ -117,11 +117,12 @@ footer>p
   left: 50px;
 }
 .image1{
-  position: sticky;
-   bottom: 0; /* Positions the image at the bottom */
-  right: 0; /* Positions the image at the right */
+  display:flex;
+  position: fixed;
+   bottom: 0px; /* Positions the image at the bottom */
+  right: 0px; /* Positions the image at the right */
+  gap:10px;
   z-index: 1; /* Ensures the image stays above other elements */
-  height: auto;
   transform: scale(0.75,0.75)
 }
 .goback {
