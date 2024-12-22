@@ -132,6 +132,13 @@ function changeTextColor(color) {
   document.getElementById("discoTitle").style.color = color;
   document.body.style.color = color;
 }
+function showDiscoSongs(songs) {
+  var shownList = "";
+  for (let j = 0; j < songs.length; j++){
+    shownList = shownList + songs[j] + "<br>"}
+  
+  document.getElementById("songList").innerHTML = shownList;
+}
 
 function returnDisco() {
   var imgElement1 = document.getElementById('discoBack');
@@ -145,6 +152,7 @@ function returnDisco() {
       imgElement3.src = discography[i].image;
 
       // Change both background and text color based on the next album
+      showDiscoSongs(discography[(i + 1) % discography.length].songs);
       changeColor(discography[(i + 1) % discography.length].color);
       changeTextColor(discography[(i + 1) % discography.length].textColor);
       break;
@@ -164,6 +172,7 @@ function goDisco() {
       imgElement3.src = discography[(i - 2 + discography.length) % discography.length].image;
 
       // Change both background and text color based on the previous album
+      showDiscoSongs(discography[(i - 1 + discography.length) % discography.length].songs)
       changeColor(discography[(i - 1 + discography.length) % discography.length].color);
       changeTextColor(discography[(i - 1 + discography.length) % discography.length].textColor);
       break;

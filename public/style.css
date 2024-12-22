@@ -166,14 +166,14 @@ footer>p
   width: 25%;
 }
 
-.songList{
+#songList{
   position: absolute;
   display: inline-block;
+  justify-content: justify;
   width: 60%;
   height: 600px;
   top: 200px;
   right: 0px;
-  border: 2px solid green;
 }
 .goback {
   position: fixed;
