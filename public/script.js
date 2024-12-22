@@ -58,12 +58,18 @@ const disco1 = {
   color: "#fbf0c4",
   textColor: "#291b17"
 }
-
+}
 function changeColor(color) {
   document.body.style.backgroundColor = color;
 }
 
 function returnDisco(){
 var imgElement = document.getElementById('discoPrimary');
+for (let i = 1; i<=10; i++) {
+     if ("disco" + i + ".image" == imgElement.src) {
+        products[key] = obj[key]
+         retValue = true;
+     }
+  }
 imgElement.src = (imgElement.src === img1)? img2 : img1;
 }
