@@ -108,13 +108,19 @@ const discography = [
     name: "Die With A Smile",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DieSmile.jpg?v=1734829826264",
     color: '#2f88b5',
-    textColor: '#f1ede9'
+    textColor: '#f1ede9',
+    songs: [
+      "Die with a Smile"
+    ]
   },
   {
     name: "APT",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/Apt.jpg?v=1734829795018",
     color: '#f2688c',
-    textColor: '#291b17'
+    textColor: '#291b17',
+    songs: [
+      "APT"
+    ]
   }
 ];
 

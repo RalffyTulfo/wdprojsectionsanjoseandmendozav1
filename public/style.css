@@ -133,11 +133,12 @@ footer>p
   justify-content: center;
   padding: 30px;
 }
-.discoTitle{
-  font-size: 95px;
+.discoTitle {
+  position: absolute;
   width:50%;
-  margin-left:50%;
-  top:50px;
+  top: 50px; /* adjust this as needed */
+  right: 0; /* align it to the right */
+  font-size: 95px;
 }
 .discoAlbums>img{
   position:relative;
