@@ -119,7 +119,7 @@ footer>p
 .image1{
   display:inline-block;
   position: fixed;
-  width:40%;
+  width:41%;
    bottom: 0px; /* Positions the image at the bottom */
   right: 0px; /* Positions the image at the right */
   z-index: 4; /* Ensures the image stays above other elements */
