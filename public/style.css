@@ -93,10 +93,10 @@ footer>p
 * {
   box-sizing: border-box;
 }
-.bioPage{
+.bioPage {
   background-color:#f8bd24;
 }
-.bioTitle{
+.bioTitle {
   font-size: 120px;
   margin-right: 50%;
   width: 60%;
@@ -108,7 +108,7 @@ footer>p
   font-family: 'Courier', sans-serif;
 }
 
-.bioContent{
+.bioContent {
   width: 60%;
   padding: 50px;
   font-family: 'Courier', Monospace;
@@ -116,7 +116,7 @@ footer>p
   text-align: justify;
   left: 50px;
 }
-.image1{
+.image1 {
   display:inline-block;
   position: fixed;
   width:41%;
@@ -174,6 +174,13 @@ footer>p
   height: 600px;
   top: 200px;
   right: 0px;
+}
+.shownList { 
+  font-size: 30px;
+  font-family: 'Courier', Monospace;
+  text-align: justify;
+  align-items: center;
+  margin: 10%;
 }
 .goback {
   position: fixed;
