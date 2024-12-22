@@ -121,6 +121,15 @@ const discography = [
     songs: [
       "APT"
     ]
+  },
+  {
+    name: "blank",
+    image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/blank.png?v=1734876746288",
+    color: '#291b17',
+    textColor: '#f1ede9',
+    songs: [
+      "Click on the Covers to keep going"
+    ]
   }
 ];
 

@@ -119,7 +119,7 @@ footer>p
 .image1 {
   display:inline-block;
   position: fixed;
-  width:41%;
+  width:42%;
    bottom: 0px; /* Positions the image at the bottom */
   right: 0px; /* Positions the image at the right */
   z-index: 4; /* Ensures the image stays above other elements */
@@ -134,7 +134,7 @@ footer>p
   padding: 30px;
 }
 .discoPage{
-  background-color: #f2688c;
+  background-color: #291b17;
 }
 #discoTitle {
   position: absolute;
