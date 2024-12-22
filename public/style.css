@@ -181,6 +181,7 @@ footer>p
 .shownList { 
   font-size: 30px;
   font-family: 'Courier', Monospace;
+  font-weight: bold;
   text-align: justify;
   align-items: center;
   margin: 10%;

@@ -137,7 +137,7 @@ function showDiscoSongs(songs) {
   for (let j = 0; j < songs.length; j++){
     shownList = shownList + songs[j] + "<br>"}
   
-  document.getElementById("songList").innerHTML = shownList;
+  document.getElementById("songList").innerHTML = "<p class=" + "shownList" + ">" + shownList + "<\p>";
 }
 
 function returnDisco() {
