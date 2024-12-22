@@ -156,9 +156,7 @@ footer>p
 #discoPrimary{
   width: 25%;
 }
-.discoBody{
-  display: flex;
-}
+
 aside{
   position: relative;
   display: inline-flex;
