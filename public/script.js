@@ -60,6 +60,7 @@ const discography = [
     textColor: "#291b17"
   }
 ];
+
 function changeColor(color) {
   document.body.style.backgroundColor = color;
 }
@@ -71,9 +72,25 @@ var imgElement3 = document.getElementById('discoGo');
   
 for (let i = 0; i<discography.length; i++) { 
      if (discography[i].image == imgElement2.src) {
-        imgElement1.src = discography[i-2].image;
-        imgElement2.src = discography[i-1].image;
-        imgElement3.src = discography[i].image;
+      imgElement1.src = discography[(i + 2) % discography.length].image;
+      imgElement2.src = discography[(i + 1) % discography.length].image;
+      imgElement3.src = discography[i].image;
+      break;
+     }
+  }
+}
+
+function goDisco(){
+var imgElement1 = document.getElementById('discoBack');
+var imgElement2 = document.getElementById('discoPrimary');
+var imgElement3 = document.getElementById('discoGo');
+  
+for (let i = 0; i<discography.length; i++) { 
+     if (discography[i].image == imgElement2.src) {
+      imgElement1.src = discography[i].image;
+      imgElement2.src = discography[(i - 1) % discography.length].image;
+      imgElement3.src = discography[(i - 2) % discography.length].image;
+      break;
      }
   }
 }
