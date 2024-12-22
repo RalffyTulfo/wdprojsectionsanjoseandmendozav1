@@ -133,7 +133,7 @@ footer>p
   justify-content: center;
   padding: 30px;
 }
-.discoTitle {
+#discoTitle {
   position: absolute;
   width:50%;
   top: 50px; /* adjust this as needed */
@@ -171,7 +171,7 @@ footer>p
   display: inline-block;
   width: 60%;
   height: 600px;
-  top: 300px;
+  top: 200px;
   right: 0px;
   border: 2px solid green;
 }
@@ -201,7 +201,7 @@ footer>p
   text-decoration: none;
   justify-content: space-around;
 }
-.gobacklinks{
+.gobacklinks {
   color:#f1ede9;
   font-family:'Courier', Monospace;
   font-weight: bold;
