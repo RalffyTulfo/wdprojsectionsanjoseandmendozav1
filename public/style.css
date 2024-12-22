@@ -156,6 +156,18 @@ footer>p
 #discoPrimary{
   width: 25%;
 }
+.discoBody{
+  display: flex;
+}
+aside{
+  position: relative;
+  display: inline-flex;
+  width: 60%;
+  height: 200px;
+  top: 200px;
+  right: 0px;
+  border: 2px solid green;
+}
 .goback {
   position: fixed;
   bottom: 0px;
