@@ -129,7 +129,7 @@ function changeColor(color) {
 }
 
 function changeTextColor(color) {
-  
+  document.header.style.color = color;
   document.body.style.color = color;
 }
 

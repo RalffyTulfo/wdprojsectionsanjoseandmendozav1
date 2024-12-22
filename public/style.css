@@ -138,22 +138,28 @@ footer>p
   width:50%;
   top: 50px; /* adjust this as needed */
   margin-left: 40%;/* align it to the right */
-  font-size: 90%;
+  font-size: 90px;
 }
-.discoBody{
-  display:inline-block;
+.discoAlbums{
+  margin-bottom: 50%;
 }
+
 .discoAlbums>img{
   position:relative;
   display:flex;
   justify-content: center;
   margin-left: 10%;
-  top: -150px;
+  top: 0px;
   padding: 30px;
 }
 #discoBack, #discoGo{
   width: 20%;
   opacity: 0.5;
+  margin-left: 12.5%
+}
+#discoBack:hover, #discoGo:hover{
+  width: 20%;
+  opacity: 1;
   margin-left: 12.5%
 }
 #discoPrimary{
