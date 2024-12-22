@@ -117,13 +117,12 @@ footer>p
   left: 50px;
 }
 .image1{
-  display:flex;
+  display:inline-block;
   position: fixed;
-   bottom: 0px; /* Positions the image at the bottom */
-  right: 0px; /* Positions the image at the right */
-  gap:10px;
-  z-index: 1; /* Ensures the image stays above other elements */
-  transform: scale(0.75,0.75)
+  transform: scale(0.75,0.75);
+   bottom: -100px; /* Positions the image at the bottom */
+  right: -100px; /* Positions the image at the right */
+  z-index: 4; /* Ensures the image stays above other elements */
 }
 .albumCover>img{
   display: inline-block;
