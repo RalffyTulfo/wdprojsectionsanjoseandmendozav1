@@ -65,37 +65,44 @@ function changeColor(color) {
   document.body.style.backgroundColor = color;
 }
 
-function returnDisco(){
-var imgElement1 = document.getElementById('discoBack');
-var imgElement2 = document.getElementById('discoPrimary');
-var imgElement3 = document.getElementById('discoGo');
+function changeTextColor(color) {
+  document.body.style.color = color;
+}
+
+function returnDisco() {
+  var imgElement1 = document.getElementById('discoBack');
+  var imgElement2 = document.getElementById('discoPrimary');
+  var imgElement3 = document.getElementById('discoGo');
   
-for (let i = 0; i<discography.length; i++) { 
-     if (discography[i].image == imgElement2.src) {
+  for (let i = 0; i < discography.length; i++) { 
+    if (discography[i].image == imgElement2.src) {
       imgElement1.src = discography[(i + 2) % discography.length].image;
       imgElement2.src = discography[(i + 1) % discography.length].image;
       imgElement3.src = discography[i].image;
-       
-      changeColor(discography.colordiscography[(i + 1) % discography.length]);
+
+      // Change both background and text color based on the next album
+      changeColor(discography[(i + 1) % discography.length].color);
+      changeTextColor(discography[(i + 1) % discography.length].textColor);
       break;
-     }
+    }
   }
 }
 
-function goDisco(){
-var imgElement1 = document.getElementById('discoBack');
-var imgElement2 = document.getElementById('discoPrimary');
-var imgElement3 = document.getElementById('discoGo');
+function goDisco() {
+  var imgElement1 = document.getElementById('discoBack');
+  var imgElement2 = document.getElementById('discoPrimary');
+  var imgElement3 = document.getElementById('discoGo');
   
-for (let i = 0; i<discography.length; i++) { 
-     if (discography[i].image == imgElement2.src) {
-       
+  for (let i = 0; i < discography.length; i++) { 
+    if (discography[i].image == imgElement2.src) {
       imgElement1.src = discography[i].image;
       imgElement2.src = discography[(i - 1 + discography.length) % discography.length].image;
       imgElement3.src = discography[(i - 2 + discography.length) % discography.length].image;
-       
-       changeColor(discography[(i - 1 + discography.length) % discography.length].color);
+
+      // Change both background and text color based on the previous album
+      changeColor(discography[(i - 1 + discography.length) % discography.length].color);
+      changeTextColor(discography[(i - 1 + discography.length) % discography.length].textColor);
       break;
-     }
+    }
   }
 }
