@@ -143,11 +143,19 @@ footer>p
 .discoAlbums>img{
   position:relative;
   display:flex;
+  justify-content: center;
   margin-left: 10%;
-  top: -100px;
+  top: -150px;
   padding: 30px;
 }
-
+#discoBack, #discoGo{
+  width: 20%;
+  opacity: 0.5;
+  margin-left: 12.5%
+}
+#discoPrimary{
+  width: 25%;
+}
 .goback {
   position: fixed;
   bottom: 0px;

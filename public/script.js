@@ -76,7 +76,7 @@ for (let i = 0; i<discography.length; i++) {
       imgElement2.src = discography[(i + 1) % discography.length].image;
       imgElement3.src = discography[i].image;
        
-      changeColor(imgElement2.color);
+      changeColor(discography.colordiscography[(i + 1) % discography.length]);
       break;
      }
   }
@@ -94,7 +94,7 @@ for (let i = 0; i<discography.length; i++) {
       imgElement2.src = discography[(i - 1 + discography.length) % discography.length].image;
       imgElement3.src = discography[(i - 2 + discography.length) % discography.length].image;
        
-       changeColor(imgElement2.color);
+       changeColor(discography[(i - 1 + discography.length) % discography.length].color);
       break;
      }
   }
