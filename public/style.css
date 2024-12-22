@@ -119,9 +119,9 @@ footer>p
 .image1{
   display:inline-block;
   position: fixed;
-  transform: scale(0.75,0.75);
-   bottom: -100px; /* Positions the image at the bottom */
-  right: -100px; /* Positions the image at the right */
+  width:40%;
+   bottom: 0px; /* Positions the image at the bottom */
+  right: 0px; /* Positions the image at the right */
   z-index: 4; /* Ensures the image stays above other elements */
 }
 .albumCover>img{
