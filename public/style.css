@@ -141,12 +141,13 @@ footer>p
   top:50px;
 }
 .discoAlbums>img{
-  width:20%;
-  margin-left: 2%;
-  margin-top: 10%;
-  justify-content: center;
+  position:relative;
+  display:flex;
+  margin-left: 10%;
+  top: -100px;
   padding: 30px;
 }
+
 .goback {
   position: fixed;
   bottom: 0px;
