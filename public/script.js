@@ -3,49 +3,106 @@ const discography = [
     name: "Doo Wops & Hooligans",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
     color: '#fbf0c4',
-    textColor: '#291b17'
+    textColor: '#291b17',
+    songs: [
+      "Just the Way You Are",
+      "Grenade",
+      "The Lazy Song",
+      "Marry You",
+      "Count on Me",
+      "Talking to the Moon",
+      "Runaway Baby",
+      "Liquor Store Blues (feat. Damian Marley)",
+      "The Other Side (feat. CeeLo Green and B.o.B)",
+      "Our First Time"
+    ]
   },
   {
     name: "It Will Rain",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/ItWillRain.jpg?v=1734829854447",
     color: '#c4bcaf',
-    textColor: '#291b17'
+    textColor: '#291b17',
+    songs: [
+      "It Will Rain"
+    ]
   },
   {
     name: "Unorthodox Jukebox",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/UnorthoJuke.jpg?v=1734779496578",
     color: '#d9ceb9',
-    textColor: '#921f22'
+    textColor: '#921f22',
+    songs: [
+      "Locked Out of Heaven",
+      "Treasure",
+      "When I Was Your Man",
+      "Gorilla",
+      "If I Knew",
+      "Moonshine",
+      "Natalie",
+      "Show Me",
+      "Money Make Her Smile",
+      "Young Girls"
+    ]
   },
   {
     name: "24k Magic",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/24kMagic.jpg?v=1734779468894",
     color: '#ba282a',
-    textColor: '#f1ede9'
+    textColor: '#f1ede9',
+    songs: [
+      "24K Magic",
+      "That's What I Like",
+      "Finesse",
+      "Versace on the Floor",
+      "Chunky",
+      "Perm",
+      "Straight Up & Down",
+      "Too Good to Say Goodbye",
+      "Calling All My Lovelies"
+    ]
   },
   {
     name: "Wake Up In The Sky",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/WakeUpSky.jpg?v=1734829845944",
     color: '#0a0605',
-    textColor: '#f1ede9'
+    textColor: '#f1ede9',
+    songs: [
+      "Wake Up in the Sky"
+    ]
   },
   {
     name: "Please Me",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/PleaseMe.png?v=1734829836651",
     color: '#2f2355',
-    textColor: '#f1ede9'
+    textColor: '#f1ede9',
+    songs: [
+      "Please Me"
+    ]
   },
   {
     name: "Blow",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/Blow.jpg?v=1734829799060",
     color: '#fafafa',
-    textColor: '#291b17'
+    textColor: '#291b17',
+    songs: [
+      "Blow"
+    ]
   },
   {
     name: "An Evening With Silk Sonic",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/SilkSonic.png?v=1734779491655",
     color: '#cd9b64',
-    textColor: '#6d4238'
+    textColor: '#6d4238',
+    songs: [
+      "Leave the Door Open",
+      "Fly as Me",
+      "After Last Night (with Thundercat and Bootsy Collins)",
+      "Smokin Out the Window",
+      "Put On a Smile",
+      "Skate",
+      "777",
+      "Blast Off"
+    ]
   },
   {
     name: "Die With A Smile",
@@ -66,6 +123,7 @@ function changeColor(color) {
 }
 
 function changeTextColor(color) {
+  
   document.body.style.color = color;
 }
 
