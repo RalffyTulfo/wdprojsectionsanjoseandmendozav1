@@ -68,9 +68,12 @@ function returnDisco(){
 var imgElement1 = document.getElementById('discoBack');
 var imgElement2 = document.getElementById('discoPrimary');
 var imgElement3 = document.getElementById('discoGo');
-for (let key in discography) {
+  
+for (let key in discography) { 
      if (discography[key].image == imgElement2.src) {
-        imgElement3.src = discography[key]
+        imgElement1.src = discography[key-2].image;
+        imgElement2.src = discography[key-1].image;
+        imgElement3.src = discography[key].image;
      }
   }
 }
