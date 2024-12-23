@@ -161,6 +161,7 @@ const albumsOnlyDiscography = [
     textColor: '#291b17',
     date: 2010,
     streams: 245,
+    description: "Lorem Ipsum",
     songs: [
       "Just the Way You Are",
       "Grenade",
@@ -181,6 +182,7 @@ const albumsOnlyDiscography = [
     textColor: '#921f22',
     date: 2012,
     streams: 242,
+    description: "Lorem ipsum",
     songs: [
       "Locked Out of Heaven",
       "Treasure",
@@ -201,6 +203,7 @@ const albumsOnlyDiscography = [
     textColor: '#f1ede9',
     date: 2016,
     streams: 239,
+    description: "Lorem ipsum",
     songs: [
       "24K Magic",
       "That's What I Like",
@@ -220,6 +223,7 @@ const albumsOnlyDiscography = [
     textColor: '#6d4238',
     date: 2021,
     streams: 143,
+    description: "Lorem ipsum",
     songs: [
       "Leave the Door Open",
       "Fly as Me",
@@ -236,12 +240,17 @@ const albumsOnlyDiscography = [
 function changeColor(color) {
   document.body.style.backgroundColor = color;
 }
-
 function changeTextColor(color) {
   document.body.style.color = color;
-  document.getElementById("discoTitle").style.color = color;
+  let discoTitle = document.getElementById("discoTitle");
+  if (discoTitle) {
+    discoTitle.style.color = color;
+  }
+  let albumTitle = document.getElementById("albumTitle");
+  if (albumTitle) {
+    albumTitle.style.color = color;
+  }
   document.getElementById("Copyright").style.color = color;
-  document.getElementById("albumTitle").style.color = color;
 }
 function showDiscoSongs(songs) {
   var shownList = "";
@@ -310,6 +319,9 @@ function displayAlbums(sortedAlbums){
     return function() {
     changeColor(album.color);
     changeTextColor(album.textColor)};
+    function desc (albumsOnlyDiscography){
+      return 
+    }
   })(album);
     
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
