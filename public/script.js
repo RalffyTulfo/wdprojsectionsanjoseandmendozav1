@@ -307,12 +307,14 @@ function displayAlbums(sortedAlbums){
     img.src = album.image;
     img.onclick = (function(color) { // Immediately return the 
     return function() {
-    changeColor(color);};
-  })(album.color);
+    changeColor(color);
+    changeTextColor(color)};
+  })(album.color, album.textColor);
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
     
     // Append to the albumContainer
     albumContainer.appendChild(img);
+    albumContainer.appendChild(div);
   }
   
 }
