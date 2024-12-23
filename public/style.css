@@ -193,14 +193,22 @@ footer>p
   align-items: center;
   margin: 10%;
 }
-#albumContainer {
-  width: 60%;
-  display: block;
+.albumTitle {
+  font-size: 100px;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  top: 20px;
+  text-align: center;
+  color: #f1ede9;
+  font-family: 'Roca One', sans-serif;
+  z-index: 2;
 }
 #albumContainer>img {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
   cursor: pointer;
 }
 .sort-buttons button {
