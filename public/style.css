@@ -217,6 +217,12 @@ footer>p
   padding: 20px;
   cursor: pointer;
 }
+.albumDescription {
+  position: absolute;
+  width: 60%;
+  top: 50px;
+  right: 50px;
+}
 .sort-buttons button {
   margin: 5px;
   padding: 10px;

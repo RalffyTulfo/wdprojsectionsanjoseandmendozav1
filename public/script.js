@@ -161,7 +161,7 @@ const albumsOnlyDiscography = [
     textColor: '#291b17',
     date: 2010,
     streams: 245,
-    description: "Lorem Ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mollis nibh ac odio vestibulum placerat. Donec ac elit libero. Duis at justo tristique, dapibus erat sed, posuere felis. Nunc gravida diam nec mollis porta. Cras mollis elementum convallis. Nam dictum eu orci volutpat ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus tincidunt dui eu ipsum pellentesque, quis pulvinar mi vestibulum. In dictum ipsum eu molestie porttitor.",
     songs: [
       "Just the Way You Are",
       "Grenade",
@@ -182,7 +182,7 @@ const albumsOnlyDiscography = [
     textColor: '#921f22',
     date: 2012,
     streams: 242,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget sem magna. Etiam metus risus, ornare vel tempus quis, fringilla eget velit. Integer maximus odio sem, sed ornare odio hendrerit id. Ut porta sed mi sed pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur fermentum dignissim consectetur. Morbi lectus dui, congue a dignissim sit amet, finibus eget enim. Praesent lacinia tellus ut magna finibus, in posuere lorem luctus. Aenean id mauris eget lorem facilisis lobortis in ac arcu. Pellentesque quis leo in nunc ornare consequat. Maecenas id ornare nunc. Sed vitae ultrices odio, id ultricies ex. Aliquam erat volutpat. Aliquam eu porta purus.Curabitur in euismod diam. Mauris id purus et est ultricies mattis. Pellentesque placerat et tortor non elementum. Maecenas vitae aliquet risus, quis lobortis massa. Phasellus vestibulum fringilla ante tincidunt cursus. Sed placerat tellus in ornare vestibulum. Vivamus mattis vel erat eget vulputate. Nam a euismod augue. Ut a semper magna. Ut tincidunt, quam vel congue lacinia, nulla massa faucibus lorem, convallis finibus eros risus sit amet risus. Etiam porta sapien tellus, quis feugiat felis condimentum at. Donec condimentum ex risus, nec malesuada nibh sollicitudin vitae. Aliquam congue euismod faucibus. Nunc ut viverra sem, et imperdiet urna. Nulla eleifend gravida semper.",
     songs: [
       "Locked Out of Heaven",
       "Treasure",
@@ -203,7 +203,15 @@ const albumsOnlyDiscography = [
     textColor: '#f1ede9',
     date: 2016,
     streams: 239,
-    description: "Lorem ipsum",
+    description: "Lorem ipsum odor amet, consectetuer adipiscing elit. Venenatis nascetur iaculis justo habitant ornare phasellus maximus ullamcorper. Aultricies massa; venenatis pellentesque finibus inceptos vitae erat. Velit in risus non habitasse integer potenti aptent. Proin class a quis dui hac luctus; ultrices cursus. Dis magna dolor nostra est venenatis phasellus. Dis id dapibus iaculis mollis rutrum aliquet. Facilisis a tempus ridiculus duis ac quam potenti.
+
+Finibus rhoncus mauris accumsan dui in lectus vestibulum nisl pellentesque. Ipsum nibh nisi nibh luctus ligula neque. Fusce vel fames facilisis fusce netus sit purus odio. Condimentum vitae etiam at elit augue senectus feugiat luctus nec. Massa sem malesuada maecenas malesuada mauris, primis taciti nisl nam. Mollis vel placerat varius mi, senectus in per. Nam sollicitudin curabitur convallis litora platea conubia.
+
+Non tellus finibus congue ante litora feugiat. Facilisis scelerisque gravida taciti nec mus semper viverra ad. Venenatis vestibulum sit porta enim, aliquet lacus finibus phasellus? Rhoncus lacus nullam dapibus aenean; elit dictum convallis. Dui imperdiet ad orci, gravida integer lobortis montes. Molestie vestibulum ac dictumst, odio quisque nulla iaculis urna. Malesuada morbi est ullamcorper ligula, dictum lacus cubilia.
+
+Dolor ligula ad taciti risus id nisi sagittis. Consectetur ligula facilisis facilisis euismod vehicula auctor congue ante habitasse. Molestie fringilla quis blandit torquent porta eget metus efficitur parturient. Euismod donec hendrerit mattis consequat rhoncus nunc consectetur hac maecenas. Etiam ridiculus a viverra eget quam platea maximus mauris mus? Interdum vehicula elit quam pellentesque odio hendrerit placerat molestie. Tempor habitasse maximus dolor cursus cras velit sociosqu lectus. Sapien blandit quis euismod placerat lacinia id mattis laoreet cursus.
+
+Cras convallis neque tempus varius velit eleifend taciti commodo. Per malesuada dictumst lobortis gravida tristique blandit. Id torquent posuere sagittis felis efficitur viverra. Lobortis posuere suscipit efficitur elit ad. Urna luctus taciti mi vivamus nostra. Senectus sollicitudin rhoncus mus sem curae. Cubilia ridiculus nascetur imperdiet tempus egestas, donec malesuada tempor.",
     songs: [
       "24K Magic",
       "That's What I Like",
@@ -335,9 +343,10 @@ function displayAlbums(sortedAlbums){
     img.onclick = (function(album) { // Immediately return the 
     return function() {
     changeColor(album.color);
-    changeTextColor(album.textColor)};
+    changeTextColor(album.textColor);
     aside.textContent = album.description;
     albumContainer.appendChild(aside);
+    aside.className = "albumDescription"}
   })(album);
     
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
