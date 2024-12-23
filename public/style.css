@@ -223,6 +223,7 @@ footer>p
   display: flex;
   text-decoration: none;
   justify-content: space-around;
+  z-index:3;
 }
 .gobacklinks {
   color: #f1ede9;
