@@ -87,7 +87,8 @@ nav>a {
 footer>p
 {
   position: absolute;
-  top:800px;
+  top: 0px;
+  right: 0px;
   font-size:10px
 }
 * {
@@ -241,18 +242,6 @@ footer>p
   font-weight: bold;
   src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
     format("opentype");
-}
-
-
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem auto 0;
-  padding: 1rem 0 0.75rem 0;
-  width: 100%;
-  flex-wrap: wrap;
-  border-top: 4px solid #fff000;
 }
 
 
