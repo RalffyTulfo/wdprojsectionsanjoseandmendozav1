@@ -62,8 +62,9 @@ nav>a {
 }
 .starsDecor {
   position:absolute;
-  height:100%;
-  top:-140px;
+  width:100%;
+  height:auto;
+  top:-100px;
   z-index:1;
 }
 .albums, .sources
@@ -85,11 +86,6 @@ nav>a {
   bottom:0px; /* Align image to the top */
   left: 40%; /* Center the image horizontally */
   transform: translateX(-50%); /* Adjust centering */ 
-}
-.crop{
-  width: 400px;
-  height:50%;
-  overflow: hidden;
 }
 footer>p
 {
