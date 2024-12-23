@@ -210,13 +210,12 @@ function goDisco() {
   }
 }
 
-const albumContainer = document.getElementById("albumContainer");
+var albumContainer = document.getElementById("albumContainer");
 
 // Display albums
 function displayAlbums(sortedAlbums){
   albumContainer.innerHTML = ""; // Clears display
 
-  
   // Go through each album and append
   for (var i = 0; i < sortedAlbums.length - 1; i++) {
     var album = sortedAlbums[i];
@@ -232,7 +231,7 @@ function displayAlbums(sortedAlbums){
 }
 
 // Show all albums initially
-displayAlbums(discography);
+displayAlbums(discography.image);
 
 // Conditional function based on dropdown
 function handleSort(option) {
