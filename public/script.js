@@ -208,8 +208,23 @@ function goDisco() {
 
 const albumContainer = document.getElementById("albumContainer");
 
-    // Function to display albums
-   
+    // Display albums
+   function displayAlbums(sortedAlbums) {
+   albumContainer.innerHTML = "";  // Clears display
+
+  // Go through each album and append
+    for (var i = 0; i < sortedAlbums.length; i++) {
+    var album = sortedAlbums[i];
+    var div = document.createElement("div");  // Create a new <div> element
+    div.style.margin = "10px 0";  // Margin for spacing
+
+    // Set the text content
+    div.textContent = album.name + " (" + album.year + ") - " + album.copies + "M copies sold";
+
+    // Append to the albumContainer
+    albumContainer.appendChild(div);
+  }
+}
 
     // Show all albums initially
     displayAlbums(discography);
