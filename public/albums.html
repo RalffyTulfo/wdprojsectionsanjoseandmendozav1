@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+    <title>Home Page for "Music from Mars"</title>
+    <meta name="author" content="FIFSanJose, RCFMendoza">
+    <meta name="description" content="Contains the elements to view the life of Bruno Mars.">
+    <meta name="keywords" content="bruno mars, bruno mars album, bruno mars biography,
+                                   bruno mars discography">
+    <meta name="revised" content="12/19/2024"/>
   <title>Sort Albums by Popularity</title>
   <style>
     .albumCover img {
@@ -22,8 +29,9 @@
   <!-- Sort Buttons -->
   <div class="sort-buttons">
     <button onclick="sortAlbums('asc')">Sort by Date (Oldest to Latest)</button>
-    <button onclick="sortAlbums('desc')">Sort by Popularity (Latest to Oldest)</button>
-    <button onclick="sortAlbums('asc')">Sort by Date (Oldest to Latest)</button>
+    <button onclick="sortAlbums('desc')">Sort by Date (Latest to Oldest)</button>
+    <button onclick="sortCopies('asc')">Sort by Copies Sold (Lowest to Highest)</button>
+    <button onclick="sortCopies('desc')">Sort by Copies Sold (Highest to Lowest)</button>
   </div>
 
   <!-- Album Display Section -->
@@ -80,19 +88,19 @@
     // Show all albums initially
     displayAlbums(albums);
 
-    // Function to sort albums
+    // Function to sort albums (date)
     function sortAlbums(order) {
       const sortedAlbums = [...albums].sort((a, b) => {
         return order === 'asc' ? a.date - b.date : b.date - a.date;
       });
       displayAlbums(sortedAlbums);
     }
-    
+    // Function to sort albums (copies)
      function sortCopies(order) {
-      const sortedCopies = [...copies].sort((a, b) => {
-        return order === 'asc' ? a.date - b.date : b.date - a.date;
+      const sortedCopies = [...albums].sort((a, b) => {
+        return order === 'asc' ? a.copies - b.copies : b.copies - a.copies;
       });
-      displayAlbums(sortedAlbums);
+      displayAlbums(sortedCopies);
     }
 
     // Change background color when album is clicked
