@@ -240,25 +240,36 @@ const albumsOnlyDiscography = [
 function changeColor(color) {
   document.body.style.backgroundColor = color;
 }
+
+
+
 function changeTextColor(color) {
   document.body.style.color = color;
+  
   let discoTitle = document.getElementById("discoTitle");
   if (discoTitle) {
     discoTitle.style.color = color;
   }
+  
   let albumTitle = document.getElementById("albumTitle");
   if (albumTitle) {
     albumTitle.style.color = color;
   }
   document.getElementById("Copyright").style.color = color;
 }
+
+
+
 function showDiscoSongs(songs) {
+  
   var shownList = "";
   for (let j = 0; j < songs.length; j++){
-    shownList = shownList + songs[j] + "<br>"}
+  shownList = shownList + songs[j] + "<br>"}
   
   document.getElementById("songList").innerHTML = "<p class=" + "shownList" + ">" + shownList + "</p>";
 }
+
+
 
 function returnDisco() {
   var imgElement1 = document.getElementById('discoBack');
@@ -280,6 +291,9 @@ function returnDisco() {
   }
 }
 
+
+
+
 function goDisco() {
   var imgElement1 = document.getElementById('discoBack');
   var imgElement2 = document.getElementById('discoPrimary');
@@ -300,17 +314,20 @@ function goDisco() {
   }
 }
 
+
+
+
 var albumContainer = document.getElementById("albumContainer");
 
-// Display albums
 function displayAlbums(sortedAlbums){
+  
   albumContainer.innerHTML = ""; // Clears display
-
-  // Go through each album and append
+  
   for (var i = 0; i < sortedAlbums.length; i++) {
     var album = sortedAlbums[i];
     var div = document.createElement("div"); // Create a new <div> element
     var img = document.createElement("img");
+    var aside = document.createElement("aside");
     div.style.margin = "10px 0"; // Margin for spacing
 
     img.src = album.image;
@@ -319,9 +336,8 @@ function displayAlbums(sortedAlbums){
     return function() {
     changeColor(album.color);
     changeTextColor(album.textColor)};
-    function desc (albumsOnlyDiscography){
-      return 
-    }
+    aside.textContent = album.description;
+    albumContainer.appendChild(aside);
   })(album);
     
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
