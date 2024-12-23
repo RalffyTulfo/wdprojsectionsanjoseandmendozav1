@@ -1,27 +1,96 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Introduction</title>
-    <meta charset="utf-8">
-    <meta name="author" content="ATLMendoza">
-    <meta name="description" content="This is template file for your project in node.js">
-    <meta name="keywords" content="node.js, npm install, package.json">
-    <meta name="revised" content="12/12/2024"/>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <h1>
-        Music From Mars
-      </h1>
-    </header>
-    <section class="albumCover">
-      <img class="dooWop" src="https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447" onclick="changeColor('#f9bd24')">
-      <img class="unorthoJuke" src="https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/UnorthoJuke.jpg?v=1734779496578" onclick="changeColor('#d9ceb9')">
-      <img class="24kMagic" src="https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/24kMagic.jpg?v=1734779468894" onclick="changeColor('#ba282a')">
-      <img class="SilkSonic" src="https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/SilkSonic.png?v=1734779491655" onclick="changeColor('#cd9b64')">
-      
-    </section>
+<html lang="en">
+<head>
+  <title>Album Filter with Buttons</title>
+  <style>
+.albumCover img {
+      width: 150px;
+      height: 150px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .filter-buttons button {
+      margin: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+  <h1>Music From Mars</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button onclick="filterAlbums(7)">Date</button>
+    <button onclick="filterAlbums(8)">Popularity 8+</button>
+    <button onclick="filterAlbums(9)">Popularity 9+</button>
+    <button onclick="filterAlbums(0)">Show All</button>
+  </div>
+
+  <!-- Album Display Section -->
+  <section class="albumCover" id="albumContainer"></section>
+
+  <script>
+    // Album data with popularity
+    const albums = [
+      {
+        name: "Doo-Wops & Hooligans",
+        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
+        popularity: 9,
+        color: "#f9bd24"
+      },
+      {
+        name: "Unorthodox Jukebox",
+        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/UnorthoJuke.jpg?v=1734779496578",
+        popularity: 8,
+        color: "#d9ceb9"
+      },
+      {
+        name: "24K Magic",
+        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/24kMagic.jpg?v=1734779468894",
+        popularity: 10,
+        color: "#ba282a"
+      },
+      {
+        name: "An Evening with Silk Sonic",
+        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/SilkSonic.png?v=1734779491655",
+        popularity: 7,
+        color: "#cd9b64"
+      }
+    ];
+
+    const albumContainer = document.getElementById("albumContainer");
+
+    // Function to display albums
+    function displayAlbums(filteredAlbums) {
+      albumContainer.innerHTML = ""; // Clear previous albums
+      filteredAlbums.forEach(album => {
+        const img = document.createElement("img");
+        img.src = album.img;
+        img.alt = album.name;
+        img.style.border = `5px solid ${album.color}`;
+        img.onclick = () => changeColor(album.color);
+        albumContainer.appendChild(img);
+      });
+    }
+
+    // Show all albums initially
+    displayAlbums(albums);
+
+    // Filter albums based on popularity
+    function filterAlbums(minPopularity) {
+      const filteredAlbums = minPopularity === 0 
+        ? albums // Show all if 0
+        : albums.filter(album => album.popularity >= minPopularity);
+      displayAlbums(filteredAlbums);
+    }
+
+    // Change background color when album is clicked
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
      <div class="gobackfull">
       <a href="index.html" class="gobacklinks">Home</a>
       <a href="bio.html" class="gobacklinks">Biography</a>
