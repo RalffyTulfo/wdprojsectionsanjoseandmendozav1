@@ -27,7 +27,7 @@ h1
   top: 100px;
   text-align: center;
   color: #f1ede9;
-  font-family: 'Courier', sans-serif;
+  font-family: 'Roca One', sans-serif;
 }
 /* Basic page style resets */
 nav {
@@ -54,7 +54,7 @@ nav>a {
   position: relative; /* Avoid being blocked by the image */
   z-index: 1;/* Ensure links are clickable */
   color: black;
-  font-family: 'Courier', Monospace;
+  font-family: 'Roca One', Monospace;
   font-weight: bold;
   text-decoration: none;
   
@@ -105,13 +105,13 @@ footer>p
   top: 100px;
   text-align: left;
   color: #f1ede9;
-  font-family: 'Courier', sans-serif;
+  font-family: 'Roca One', sans-serif;
 }
 
 .bioContent {
   width: 60%;
   padding: 50px;
-  font-family: 'Courier', Monospace;
+  font-family: 'Roca One', Monospace;
   text-decoration: none;
   text-align: justify;
   left: 50px;
@@ -179,7 +179,7 @@ footer>p
 }
 .shownList { 
   font-size: 30px;
-  font-family: 'Courier', Monospace;
+  font-family: 'Roca One', Monospace;
   font-weight: bold;
   text-align: justify;
   align-items: center;
@@ -213,7 +213,7 @@ footer>p
 }
 .gobacklinks {
   color: #f1ede9;
-  font-family:'Courier', Monospace;
+  font-family:'Roca One', Monospace;
   font-weight: bold;
   text-decoration: none;
 }
@@ -252,11 +252,15 @@ footer>p
 
 
 body {
-  font-family: 'Courier', Monospace;
+  font-family: 'Roca One', Monospace;
   background-color: var(--color-bg);
 }
 
 
 h2 {
   color: var(--color-text-header);
+}
+@font-face{
+  font-family: "Roca One";
+  src: url(https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/RocaOne-Rg.ttf?v=1734915367238);
 }
