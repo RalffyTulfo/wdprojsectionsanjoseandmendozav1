@@ -139,6 +139,7 @@ function changeColor(color) {
 
 function changeTextColor(color) {
   document.getElementById("discoTitle").style.color = color;
+  document.getElementById("discoCopyright").style.color = color;
   document.body.style.color = color;
 }
 function showDiscoSongs(songs) {
