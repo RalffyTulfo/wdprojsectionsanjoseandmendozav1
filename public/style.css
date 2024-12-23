@@ -24,7 +24,7 @@ h1
   margin: auto;
   width: 100%;
   position: relative;
-  top: 20px;
+  top: 100px;
   text-align: center;
   color: #f1ede9;
   font-family: 'Roca One', sans-serif;
@@ -33,7 +33,7 @@ h1
 /* Basic page style resets */
 nav {
   position: relative; /* Allows z-index control */
-  top: 100px;
+  top: 150px;
   width: 25%;
   border-radius: 25px;
   border: 2px solid #f1ede9;
@@ -63,8 +63,9 @@ nav>a {
 .starsDecor {
   position:absolute;
   width:100%;
-  height:auto;
-  top:-100px;
+  height: 100%;
+  top:0px;
+  object-fit:none;
   z-index:1;
 }
 .albums, .sources
@@ -81,7 +82,7 @@ nav>a {
   position: absolute; /* Keep the image positioned */
   z-index: 2; /* Place it below clickable text */
   width: auto; /* Adjust width */
-  height: 750px; /* Control the height */
+  height: 800px; /* Control the height */
   object-fit: cover; /* Ensures cropping fits the area */
   bottom:0px; /* Align image to the top */
   left: 40%; /* Center the image horizontally */
@@ -101,12 +102,12 @@ footer>p
   background-color:#f8bd24;
 }
 .bioTitle {
-  font-size: 120px;
+  font-size: 100px;
   margin-right: 50%;
   width: 60%;
   position: relative;
   padding:50px;
-  top: 100px;
+  top: 0px;
   text-align: left;
   color: #f1ede9;
   font-family: 'Roca One', sans-serif;
@@ -119,6 +120,7 @@ footer>p
   text-decoration: none;
   text-align: justify;
   left: 50px;
+  top: -50px;
 }
 .image1 {
   display:inline-block;
