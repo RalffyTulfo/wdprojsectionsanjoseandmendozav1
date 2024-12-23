@@ -108,7 +108,7 @@ const discography = [
     color: '#cd9b64',
     textColor: '#6d4238',
     date: 2021,
-    streams: ,
+    streams: 143,
     songs: [
       "Leave the Door Open",
       "Fly as Me",
@@ -125,6 +125,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DieSmile.jpg?v=1734829826264",
     color: '#2f88b5',
     textColor: '#f1ede9',
+    date: 2023,
+    streams: 131,
     songs: [
       "Die with a Smile"
     ]
@@ -134,6 +136,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/Apt.jpg?v=1734829795018",
     color: '#f2688c',
     textColor: '#291b17',
+    date: 2024,
+    streams: 69,
     songs: [
       "APT"
     ]
@@ -163,7 +167,7 @@ function showDiscoSongs(songs) {
   for (let j = 0; j < songs.length; j++){
     shownList = shownList + songs[j] + "<br>"}
   
-  document.getElementById("songList").innerHTML = "<p class=" + "shownList" + ">" + shownList + "<\p>";
+  document.getElementById("songList").innerHTML = "<p class=" + "shownList" + ">" + shownList + "</p>";
 }
 
 function returnDisco() {
@@ -208,51 +212,52 @@ function goDisco() {
 
 const albumContainer = document.getElementById("albumContainer");
 
-    // Display albums
-   function displayAlbums(sortedAlbums) {
-   albumContainer.innerHTML = "";  // Clears display
+// Display albums
+function displayAlbums(sortedAlbums) {
+  albumContainer.innerHTML = ""; // Clears display
 
   // Go through each album and append
-    for (var i = 0; i < sortedAlbums.length; i++) {
+  for (var i = 0; i < sortedAlbums.length; i++) {
     var album = sortedAlbums[i];
-    var div = document.createElement("div");  // Create a new <div> element
-    div.style.margin = "10px 0";  // Margin for spacing
+    var div = document.createElement("div"); // Create a new <div> element
+    div.style.margin = "10px 0"; // Margin for spacing
 
     // Set the text content
-    div.textContent = album.name + " (" + album.year + ") - " + album.copies + "M copies sold";
+    div.textContent = album.name + " (" + album.date + ") - " + album.streams + "M streams";
 
     // Append to the albumContainer
     albumContainer.appendChild(div);
   }
 }
 
-    // Show all albums initially
-    displayAlbums(discography);
+// Show all albums initially
+displayAlbums(discography);
 
-      //Conditional function based on dropdown
-     function handleSort(option) {
-      if (option === 'date-asc') {
-        sortAlbums('asc');
-      } else if (option === 'date-desc') {
-        sortAlbums('desc');
-      } else if (option === 'stream-asc') {
-        sortStreams('asc');
-      } else if (option === 'stream-desc') {
-        sortStreams('desc');
-      }
-    }
+// Conditional function based on dropdown
+function handleSort(option) {
+  if (option === 'date-asc') {
+    sortAlbums('asc');
+  } else if (option === 'date-desc') {
+    sortAlbums('desc');
+  } else if (option === 'stream-asc') {
+    sortStreams('asc');
+  } else if (option === 'stream-desc') {
+    sortStreams('desc');
+  }
+}
 
-    // Function to sort albums (date)
-    function sortAlbums(order) {
-      const sortedAlbums = [...discography].sort((a, b) => {
-        return order === 'asc' ? a.date - b.date : b.date - a.date;
-      });
-      displayAlbums(sortedAlbums);
-    }
-    // Function to sort albums (copies)
-     function sortStreams(order) {
-      const sortedStreams = [...discography].sort((a, b) => {
-        return order === 'asc' ? a.copies - b.copies : b.copies - a.copies;
-      });
-      displayAlbums(sortedCopies);
-    }
+// Function to sort albums (date)
+function sortAlbums(order) {
+  const sortedAlbums = [...discography].sort((a, b) => {
+    return order === 'asc' ? a.date - b.date : b.date - a.date;
+  });
+  displayAlbums(sortedAlbums);
+}
+
+// Function to sort albums (streams)
+function sortStreams(order) {
+  const sortedStreams = [...discography].sort((a, b) => {
+    return order === 'asc' ? a.streams - b.streams : b.streams - a.streams;
+  });
+  displayAlbums(sortedStreams);
+}
