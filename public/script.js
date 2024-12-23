@@ -305,7 +305,10 @@ function displayAlbums(sortedAlbums){
 
     // Set the text content
     img.src = album.image;
-    img.onclick = changeColor(album.color);
+    img.onclick = (function(color) { // Immediately return the 
+    return function() {
+    changeColor(color);};
+  })(album.color);
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
     
     // Append to the albumContainer
