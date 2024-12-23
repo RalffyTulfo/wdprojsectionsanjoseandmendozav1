@@ -305,11 +305,13 @@ function displayAlbums(sortedAlbums){
 
     // Set the text content
     img.src = album.image;
+    img.onclick = changeColor(album.color);
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
-
+    
     // Append to the albumContainer
     albumContainer.appendChild(img);
   }
+  
 }
 
 // Show all albums initially
@@ -330,7 +332,7 @@ function handleSort(option) {
 
 // Function to sort albums (date)
 function sortAlbums(order) {
-  const sortedAlbums = [...discography].sort((a, b) => {
+  const sortedAlbums = [...albumsOnlyDiscography].sort((a, b) => {
     return order === 'asc' ? a.date - b.date : b.date - a.date;
   });
   displayAlbums(sortedAlbums);
@@ -338,7 +340,7 @@ function sortAlbums(order) {
 
 // Function to sort albums (streams)
 function sortStreams(order) {
-  const sortedStreams = [...discography].sort((a, b) => {
+  const sortedStreams = [...albumsOnlyDiscography].sort((a, b) => {
     return order === 'asc' ? a.streams - b.streams : b.streams - a.streams;
   });
   displayAlbums(sortedStreams);
