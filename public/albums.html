@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Album Filter with Buttons</title>
+  <title>Sort Albums by Popularity</title>
   <style>
-.albumCover img {
+    .albumCover img {
       width: 150px;
       height: 150px;
       margin: 10px;
       cursor: pointer;
     }
-    .filter-buttons button {
+    .sort-buttons button {
       margin: 5px;
       padding: 10px;
       cursor: pointer;
     }
-    </style>
+  </style>
 </head>
 <body>
-  <h1>Music From Mars</h1>
+  <h1>Sort Albums by Popularity</h1>
 
-  <!-- Filter Buttons -->
-  <div class="filter-buttons">
-    <button onclick="filterAlbums(7)">Date</button>
-    <button onclick="filterAlbums(8)">Popularity 8+</button>
-    <button onclick="filterAlbums(9)">Popularity 9+</button>
-    <button onclick="filterAlbums(0)">Show All</button>
+  <!-- Sort Buttons -->
+  <div class="sort-buttons">
+    <button onclick="sortAlbums('asc')">Sort by Date (Oldest to Latest)</button>
+    <button onclick="sortAlbums('desc')">Sort by Popularity (Latest to Oldest)</button>
+    <button onclick="sortAlbums('asc')">Sort by Date (Oldest to Latest)</button>
   </div>
 
   <!-- Album Display Section -->
@@ -36,25 +35,29 @@
       {
         name: "Doo-Wops & Hooligans",
         img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
-        popularity: 9,
+        date: 2010,
+        copies: 15.5,
         color: "#f9bd24"
       },
       {
         name: "Unorthodox Jukebox",
         img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/UnorthoJuke.jpg?v=1734779496578",
-        popularity: 8,
+        date: 2012,
+        copies: 6,
         color: "#d9ceb9"
       },
       {
         name: "24K Magic",
         img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/24kMagic.jpg?v=1734779468894",
-        popularity: 10,
+        date: 2016,
+        copies: 5,
         color: "#ba282a"
       },
       {
         name: "An Evening with Silk Sonic",
         img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/SilkSonic.png?v=1734779491655",
-        popularity: 7,
+        date: 2021,
+        copies: 2,
         color: "#cd9b64"
       }
     ];
@@ -62,9 +65,9 @@
     const albumContainer = document.getElementById("albumContainer");
 
     // Function to display albums
-    function displayAlbums(filteredAlbums) {
+    function displayAlbums(albums) {
       albumContainer.innerHTML = ""; // Clear previous albums
-      filteredAlbums.forEach(album => {
+      albums.forEach(album => {
         const img = document.createElement("img");
         img.src = album.img;
         img.alt = album.name;
@@ -77,12 +80,19 @@
     // Show all albums initially
     displayAlbums(albums);
 
-    // Filter albums based on popularity
-    function filterAlbums(minPopularity) {
-      const filteredAlbums = minPopularity === 0 
-        ? albums // Show all if 0
-        : albums.filter(album => album.popularity >= minPopularity);
-      displayAlbums(filteredAlbums);
+    // Function to sort albums
+    function sortAlbums(order) {
+      const sortedAlbums = [...albums].sort((a, b) => {
+        return order === 'asc' ? a.date - b.date : b.date - a.date;
+      });
+      displayAlbums(sortedAlbums);
+    }
+    
+     function sortCopies(order) {
+      const sortedCopies = [...copies].sort((a, b) => {
+        return order === 'asc' ? a.date - b.date : b.date - a.date;
+      });
+      displayAlbums(sortedAlbums);
     }
 
     // Change background color when album is clicked
