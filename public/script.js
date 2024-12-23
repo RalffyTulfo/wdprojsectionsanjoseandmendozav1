@@ -5,7 +5,7 @@ const discography = [
     color: '#fbf0c4',
     textColor: '#291b17',
     date: 2010,
-    copies: 15.5,
+    streams: 245,
     songs: [
       "Just the Way You Are",
       "Grenade",
@@ -25,7 +25,7 @@ const discography = [
     color: '#c4bcaf',
     textColor: '#291b17',
     date: 2011,
-    
+    streams: 105,
     songs: [
       "It Will Rain"
     ]
@@ -36,7 +36,7 @@ const discography = [
     color: '#d9ceb9',
     textColor: '#921f22',
     date: 2012,
-    copies: 6,
+    streams: 242,
     songs: [
       "Locked Out of Heaven",
       "Treasure",
@@ -56,7 +56,7 @@ const discography = [
     color: '#ba282a',
     textColor: '#f1ede9',
     date: 2016,
-    copies: 5,
+    streams: 239,
     songs: [
       "24K Magic",
       "That's What I Like",
@@ -74,6 +74,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/WakeUpSky.jpg?v=1734829845944",
     color: '#0a0605',
     textColor: '#f1ede9',
+    date: 2018,
+    streams: 109,
     songs: [
       "Wake Up in the Sky"
     ]
@@ -83,6 +85,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/PleaseMe.png?v=1734829836651",
     color: '#2f2355',
     textColor: '#f1ede9',
+    date: 2019,
+    streams: 61,
     songs: [
       "Please Me"
     ]
@@ -92,6 +96,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/Blow.jpg?v=1734829799060",
     color: '#fafafa',
     textColor: '#291b17',
+    date: 2020,
+    streams: 17,
     songs: [
       "Blow"
     ]
@@ -102,7 +108,7 @@ const discography = [
     color: '#cd9b64',
     textColor: '#6d4238',
     date: 2021,
-    copies: 2,
+    streams: ,
     songs: [
       "Leave the Door Open",
       "Fly as Me",
@@ -203,19 +209,23 @@ function goDisco() {
 const albumContainer = document.getElementById("albumContainer");
 
     // Function to display albums
-    function displayAlbums(discography) {
-      albumContainer.innerHTML = ""; // Clear previous albums
-      discography.forEach(album => {
-        const img = document.createElement("img");
-        img.src = album.img;
-        img.alt = album.name;
-        img.style.border = `5px solid ${album.color}`;
-        albumContainer.appendChild(img);
-      });
-    }
+   
 
     // Show all albums initially
     displayAlbums(discography);
+
+      //Conditional function based on dropdown
+     function handleSort(option) {
+      if (option === 'date-asc') {
+        sortAlbums('asc');
+      } else if (option === 'date-desc') {
+        sortAlbums('desc');
+      } else if (option === 'stream-asc') {
+        sortStreams('asc');
+      } else if (option === 'stream-desc') {
+        sortStreams('desc');
+      }
+    }
 
     // Function to sort albums (date)
     function sortAlbums(order) {
@@ -225,8 +235,8 @@ const albumContainer = document.getElementById("albumContainer");
       displayAlbums(sortedAlbums);
     }
     // Function to sort albums (copies)
-     function sortCopies(order) {
-      const sortedCopies = [...discography].sort((a, b) => {
+     function sortStreams(order) {
+      const sortedStreams = [...discography].sort((a, b) => {
         return order === 'asc' ? a.copies - b.copies : b.copies - a.copies;
       });
       displayAlbums(sortedCopies);

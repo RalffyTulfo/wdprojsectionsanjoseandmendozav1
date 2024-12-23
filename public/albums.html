@@ -26,14 +26,14 @@
 <body>
   <h1>Sort Albums by Popularity</h1>
 
-  <!-- Sort Buttons -->
+  //sort buttons
   <div class="dropdown">
-    <label for="sortOptions">Sort Albums:</label>
+    <label for="sortOptions">Albums</label>
     <select id="sortOptions" onchange="handleSort(this.value)">
-      <option value="date-asc">Sort by Date (Oldest to Latest)</option>
-      <option value="date-desc">Sort by Date (Latest to Oldest)</option>
-      <option value="copies-asc">Sort by Copies Sold (Lowest to Highest)</option>
-      <option value="copies-desc">Sort by Copies Sold (Highest to Lowest)</option>
+      <option value="dasc">Sort by Date (Oldest to Latest)</option>
+      <option value="ddesc">Sort by Date (Latest to Oldest)</option>
+      <option value="pasc">Sort by Popularity (Least to Most Streamed)</option>
+      <option value="pdesc">Sort by Popularity (Most to Least Streamed)</option>
     </select>
   </div>
 
