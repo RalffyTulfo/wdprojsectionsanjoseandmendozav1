@@ -193,7 +193,21 @@ footer>p
   align-items: center;
   margin: 10%;
 }
-
+#albumContainer {
+  width: 60%;
+  display: block;
+}
+#albumContainer>img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  cursor: pointer;
+}
+.sort-buttons button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
 .references{
   position: relative;
   font-size: 20px;
