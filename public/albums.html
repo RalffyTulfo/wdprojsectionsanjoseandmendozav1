@@ -27,86 +27,24 @@
   <h1>Sort Albums by Popularity</h1>
 
   <!-- Sort Buttons -->
-  <div class="sort-buttons">
-    <button onclick="sortAlbums('asc')">Sort by Date (Oldest to Latest)</button>
-    <button onclick="sortAlbums('desc')">Sort by Date (Latest to Oldest)</button>
-    <button onclick="sortCopies('asc')">Sort by Copies Sold (Lowest to Highest)</button>
-    <button onclick="sortCopies('desc')">Sort by Copies Sold (Highest to Lowest)</button>
+  <div class="dropdown">
+    <label for="sortOptions">Sort Albums:</label>
+    <select id="sortOptions" onchange="handleSort(this.value)">
+      <option value="date-asc">Sort by Date (Oldest to Latest)</option>
+      <option value="date-desc">Sort by Date (Latest to Oldest)</option>
+      <option value="copies-asc">Sort by Copies Sold (Lowest to Highest)</option>
+      <option value="copies-desc">Sort by Copies Sold (Highest to Lowest)</option>
+    </select>
   </div>
+
 
   <!-- Album Display Section -->
   <section class="albumCover" id="albumContainer"></section>
 
   <script>
     // Album data with popularity
-    const albums = [
-      {
-        name: "Doo-Wops & Hooligans",
-        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
-        date: 2010,
-        copies: 15.5,
-        color: "#f9bd24"
-      },
-      {
-        name: "Unorthodox Jukebox",
-        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/UnorthoJuke.jpg?v=1734779496578",
-        date: 2012,
-        copies: 6,
-        color: "#d9ceb9"
-      },
-      {
-        name: "24K Magic",
-        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/24kMagic.jpg?v=1734779468894",
-        date: 2016,
-        copies: 5,
-        color: "#ba282a"
-      },
-      {
-        name: "An Evening with Silk Sonic",
-        img: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/SilkSonic.png?v=1734779491655",
-        date: 2021,
-        copies: 2,
-        color: "#cd9b64"
-      }
-    ];
-
-    const albumContainer = document.getElementById("albumContainer");
-
-    // Function to display albums
-    function displayAlbums(albums) {
-      albumContainer.innerHTML = ""; // Clear previous albums
-      albums.forEach(album => {
-        const img = document.createElement("img");
-        img.src = album.img;
-        img.alt = album.name;
-        img.style.border = `5px solid ${album.color}`;
-        img.onclick = () => changeColor(album.color);
-        albumContainer.appendChild(img);
-      });
-    }
-
-    // Show all albums initially
-    displayAlbums(albums);
-
-    // Function to sort albums (date)
-    function sortAlbums(order) {
-      const sortedAlbums = [...albums].sort((a, b) => {
-        return order === 'asc' ? a.date - b.date : b.date - a.date;
-      });
-      displayAlbums(sortedAlbums);
-    }
-    // Function to sort albums (copies)
-     function sortCopies(order) {
-      const sortedCopies = [...albums].sort((a, b) => {
-        return order === 'asc' ? a.copies - b.copies : b.copies - a.copies;
-      });
-      displayAlbums(sortedCopies);
-    }
-
-    // Change background color when album is clicked
-    function changeColor(color) {
-      document.body.style.backgroundColor = color;
-    }
+ 
+    
   </script>
 
      <div class="gobackfull">

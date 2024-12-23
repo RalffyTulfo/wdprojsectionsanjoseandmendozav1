@@ -4,6 +4,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
     color: '#fbf0c4',
     textColor: '#291b17',
+    date: 2010,
+    copies: 15.5,
     songs: [
       "Just the Way You Are",
       "Grenade",
@@ -22,6 +24,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/ItWillRain.jpg?v=1734829854447",
     color: '#c4bcaf',
     textColor: '#291b17',
+    date: 2011,
+    
     songs: [
       "It Will Rain"
     ]
@@ -31,6 +35,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/UnorthoJuke.jpg?v=1734779496578",
     color: '#d9ceb9',
     textColor: '#921f22',
+    date: 2012,
+    copies: 6,
     songs: [
       "Locked Out of Heaven",
       "Treasure",
@@ -49,6 +55,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/24kMagic.jpg?v=1734779468894",
     color: '#ba282a',
     textColor: '#f1ede9',
+    date: 2016,
+    copies: 5,
     songs: [
       "24K Magic",
       "That's What I Like",
@@ -93,6 +101,8 @@ const discography = [
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/SilkSonic.png?v=1734779491655",
     color: '#cd9b64',
     textColor: '#6d4238',
+    date: 2021,
+    copies: 2,
     songs: [
       "Leave the Door Open",
       "Fly as Me",
@@ -189,3 +199,35 @@ function goDisco() {
     }
   }
 }
+
+const albumContainer = document.getElementById("albumContainer");
+
+    // Function to display albums
+    function displayAlbums(discography) {
+      albumContainer.innerHTML = ""; // Clear previous albums
+      discography.forEach(album => {
+        const img = document.createElement("img");
+        img.src = album.img;
+        img.alt = album.name;
+        img.style.border = `5px solid ${album.color}`;
+        albumContainer.appendChild(img);
+      });
+    }
+
+    // Show all albums initially
+    displayAlbums(discography);
+
+    // Function to sort albums (date)
+    function sortAlbums(order) {
+      const sortedAlbums = [...discography].sort((a, b) => {
+        return order === 'asc' ? a.date - b.date : b.date - a.date;
+      });
+      displayAlbums(sortedAlbums);
+    }
+    // Function to sort albums (copies)
+     function sortCopies(order) {
+      const sortedCopies = [...discography].sort((a, b) => {
+        return order === 'asc' ? a.copies - b.copies : b.copies - a.copies;
+      });
+      displayAlbums(sortedCopies);
+    }
