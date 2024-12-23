@@ -1,4 +1,4 @@
-const discography = [
+const discography = [ //arrays that contain objects of his albums/singles and their content
   {
     name: "Doo Wops & Hooligans",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
@@ -151,9 +151,9 @@ const discography = [
       "Click on the Covers to keep going"
     ]
   }
-];
+]; 
 
-const albumsOnlyDiscography = [
+const albumsOnlyDiscography = [ // Same as discography but only albums
   {
     name: "Doo Wops & Hooligans",
     image: "https://cdn.glitch.global/28cd22da-8213-4d82-b974-08837fa87097/DooWops.jpg?v=1734779476447",
@@ -235,19 +235,19 @@ const albumsOnlyDiscography = [
       "Blast Off"
     ]
   }
-]
+] 
 
-function changeColor(color) {
+function changeColor(color) { // Changes Background Color
   document.body.style.backgroundColor = color;
 }
 
 
 
-function changeTextColor(color) {
+function changeTextColor(color) { // Changes Text Color
   document.body.style.color = color;
   
-  let discoTitle = document.getElementById("discoTitle");
-  if (discoTitle) {
+  let discoTitle = document.getElementById("discoTitle"); // This function is multi-page
+  if (discoTitle) { // If function checks if it is the correct page to prevent errors
     discoTitle.style.color = color;
   }
   
@@ -260,7 +260,7 @@ function changeTextColor(color) {
 
 
 
-function showDiscoSongs(songs) {
+function showDiscoSongs(songs) { // For the Discography songs. Displays all the Songs within an album/single
   
   var shownList = "";
   for (let j = 0; j < songs.length; j++){
@@ -271,15 +271,15 @@ function showDiscoSongs(songs) {
 
 
 
-function returnDisco() {
+function returnDisco() { // this function is when the top image is clicked. it swaps images to the middle
   var imgElement1 = document.getElementById('discoBack');
   var imgElement2 = document.getElementById('discoPrimary');
   var imgElement3 = document.getElementById('discoGo');
   
   for (let i = 0; i < discography.length; i++) { 
     if (discography[i].image == imgElement2.src) {
-      imgElement1.src = discography[(i + 2) % discography.length].image;
-      imgElement2.src = discography[(i + 1) % discography.length].image;
+      imgElement1.src = discography[(i + 2) % discography.length].image; // Cycle swap of the images
+      imgElement2.src = discography[(i + 1) % discography.length].image; // there is modulo so that if it exceeds the number of total discographies, it goes back to 0 or 1
       imgElement3.src = discography[i].image;
 
       // Change both background and text color based on the next album
@@ -294,10 +294,11 @@ function returnDisco() {
 
 
 
-function goDisco() {
+function goDisco() { // Same thing as returnDisco() but for the bottom image
   var imgElement1 = document.getElementById('discoBack');
   var imgElement2 = document.getElementById('discoPrimary');
   var imgElement3 = document.getElementById('discoGo');
+  
   
   for (let i = 0; i < discography.length; i++) { 
     if (discography[i].image == imgElement2.src) {
@@ -332,7 +333,7 @@ function displayAlbums(sortedAlbums){
 
     img.src = album.image;
     
-    img.onclick = (function(album) { // Immediately return the 
+    img.onclick = (function(album) { // Immediately return the function
     return function() {
     changeColor(album.color);
     changeTextColor(album.textColor);
