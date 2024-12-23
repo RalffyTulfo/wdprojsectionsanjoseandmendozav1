@@ -185,6 +185,12 @@ footer>p
   align-items: center;
   margin: 10%;
 }
+.references{
+  position: relative;
+  font-size: 20px;
+  width: 100%;
+  top: 100px;
+}
 .goback {
   position: fixed;
   bottom: 0px;
