@@ -238,9 +238,10 @@ function changeColor(color) {
 }
 
 function changeTextColor(color) {
-  document.getElementById("discoTitle").style.color = color;
-  document.getElementById("discoCopyright").style.color = color;
   document.body.style.color = color;
+  document.getElementById("discoTitle").style.color = color;
+  document.getElementById("Copyright").style.color = color;
+  document.getElementById("albumTitle").style.color = color;
 }
 function showDiscoSongs(songs) {
   var shownList = "";
@@ -303,13 +304,14 @@ function displayAlbums(sortedAlbums){
     var img = document.createElement("img");
     div.style.margin = "10px 0"; // Margin for spacing
 
-    // Set the text content
     img.src = album.image;
-    img.onclick = (function(color) { // Immediately return the 
+    
+    img.onclick = (function(album) { // Immediately return the 
     return function() {
-    changeColor(color);
-    changeTextColor(color)};
-  })(album.color, album.textColor);
+    changeColor(album.color);
+    changeTextColor(album.textColor)};
+  })(album);
+    
     div.textContent = album.name + " (" + album.date + ") - " + album.streams + "0M streams";
     
     // Append to the albumContainer
