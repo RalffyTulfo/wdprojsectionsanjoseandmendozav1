@@ -77,9 +77,12 @@ nav>a {
   float: left;
   clear: left;
 }
+.crop{
+  z-index: 0;
+}
 .Bruno{
-  position: absolute; 
-  z-index: 2; 
+  position: relative; 
+  z-index: 0; 
   width: auto;
   height: 800px; 
   object-fit: cover; 
@@ -126,7 +129,7 @@ footer>p
   display:inline-block;
   position: fixed;
   width:42%;
-   bottom: 0px;
+  bottom: 0px;
   right: 0px;
   z-index: 4; 
 }
