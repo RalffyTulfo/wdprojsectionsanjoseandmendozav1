@@ -151,7 +151,7 @@ footer>p
   width:50%;
   top: 50px; 
   margin-left: 40%;
-  font-size: 90px;
+  font-size: 150px;
 }
 .discoAlbums{
   display: grid;
@@ -180,6 +180,7 @@ footer>p
 }
 #discoPrimary{
   width: 25%;
+  min-width: 301.25px;
 }
 
 #songList{
@@ -192,7 +193,7 @@ footer>p
   right: 0px;
 }
 .shownList { 
-  font-size: 30px;
+  font-size: 50px;
   font-family: 'Roca One', Monospace;
   font-weight: bold;
   text-align: justify;
