@@ -148,16 +148,17 @@ footer>p
 }
 #discoTitle {
   position: absolute;
+  display: inline-block;
   width:50%;
   top: 50px; 
   margin-left: 40%;
   font-size: 90px;
 }
 .discoAlbums{
+  display: grid;
   height:100vh;
-  display: block;
   align-items: center;
-  margin-bottom: 50%;
+  margin: auto;
 }
 .discoAlbums>img{
   position:relative;
