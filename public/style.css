@@ -148,7 +148,6 @@ footer>p
 }
 #discoTitle {
   position: absolute;
-  display: inline-block;
   width:50%;
   top: 50px; 
   margin-left: 40%;
@@ -167,6 +166,7 @@ footer>p
   margin-left: 10%;
   margin-top: 0px;
   padding: 30px;
+  min-width: 225px;
 }
 #discoBack, #discoGo{
   width: 20%;
