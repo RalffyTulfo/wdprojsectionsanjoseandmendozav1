@@ -154,6 +154,9 @@ footer>p
   font-size: 90px;
 }
 .discoAlbums{
+  height:100vh;
+  display: block;
+  align-items: center;
   margin-bottom: 50%;
 }
 .discoAlbums>img{
@@ -161,7 +164,7 @@ footer>p
   display:flex;
   justify-content: center;
   margin-left: 10%;
-  top: 0px;
+  margin-top: 0px;
   padding: 30px;
 }
 #discoBack, #discoGo{
