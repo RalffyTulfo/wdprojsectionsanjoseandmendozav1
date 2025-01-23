@@ -72,7 +72,7 @@ nav>a {
   float: right;
   clear: right;
 }
-.bio, .disco
+.bio, .disco, .music
 {
   float: left;
   clear: left;
@@ -189,11 +189,12 @@ footer>p
   justify-content: justify;
   width: 60%;
   height: 600px;
-  top: 200px;
+  top: 250px;
   right: 0px;
+  box-sizing: border-box;
 }
 .shownList { 
-  font-size: 50px;
+  font-size: 40px;
   font-family: 'Roca One', Monospace;
   font-weight: bold;
   text-align: justify;
