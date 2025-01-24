@@ -72,11 +72,16 @@ nav>a {
   float: right;
   clear: right;
 }
-.bio, .disco, .music
+.bio, .disco
 {
   float: left;
   clear: left;
 }
+
+.music {
+  
+}
+
 .crop{
   position: relative;
   z-index: 2;
