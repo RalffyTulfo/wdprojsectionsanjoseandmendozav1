@@ -78,10 +78,6 @@ nav>a {
   clear: left;
 }
 
-.music {
-  
-}
-
 .crop{
   position: relative;
   z-index: 2;
@@ -103,6 +99,49 @@ footer>p
   top: 0px;
   right: 0px;
   font-size:10px
+}
+.socialMedia{
+  position: fixed;
+  width: 200px;
+  height: 40px;
+  background-color: white;
+  bottom:2px;
+  right:2px;
+  border-radius: 10px;
+  z-index:5;
+}
+#div1{
+  display: inline-block;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  background: url("https://cdn.glitch.global/f8d176dc-58fe-424e-a4f3-e52b117600fc/icon.png?v=1738287492945") no-repeat -180px -89px
+}
+#div2{
+  display: inline-block;
+  margin-left: 15px;
+  width: 40px;
+  height: 40px;
+  background: url("https://cdn.glitch.global/f8d176dc-58fe-424e-a4f3-e52b117600fc/icon.png?v=1738287492945") no-repeat -120px -89px
+}
+#div3{
+  display: inline-block;
+  margin-left: 15px;
+  width: 40px;
+  height: 40px;
+  background: url("https://cdn.glitch.global/f8d176dc-58fe-424e-a4f3-e52b117600fc/icon.png?v=1738287492945") no-repeat -290px -89px
+}
+#div1:hover{
+
+  background: url("https://cdn.glitch.global/f8d176dc-58fe-424e-a4f3-e52b117600fc/icon.png?v=1738287492945") no-repeat -180px -15px
+}
+#div2:hover{
+
+  background: url("https://cdn.glitch.global/f8d176dc-58fe-424e-a4f3-e52b117600fc/icon.png?v=1738287492945") no-repeat -120px -15px
+}
+#div3:hover{
+
+  background: url("https://cdn.glitch.global/f8d176dc-58fe-424e-a4f3-e52b117600fc/icon.png?v=1738287492945") no-repeat -290px -15px
 }
 * {
   box-sizing: border-box;
@@ -237,6 +276,76 @@ footer>p
   text-align: justify;
   top: 50px;
   left: 400px;
+}
+label{
+  font-family: 'Roca One', Monospace;
+  color: #f1ede9;
+  font-weight: bold;
+}
+select{
+  font-family: 'Roca One', Monospace;
+  font-weight: bold;
+  background-color: #291b17;
+  color: #f1ede9;
+}
+.mpBg{
+  background-color: #0a0605;
+}
+.mpButton{
+  color: #f1ede9;
+  font-weight: bold;
+  background-color: #291b17;
+}
+.mpTitle {
+  font-size: 5em;
+  opacity: 0; 
+  position: absolute;
+  animation: fadeInMove 3s ease-out forwards; 
+  text-align: center;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0; 
+    transform: translate(0%, 50%); 
+  }
+  50% {
+    opacity: 1; 
+    transform: translate(0%, 0); 
+    font-size: 5em;
+  }
+  100% {
+    opacity: 1; 
+    font-size: 250%;
+    transform: translate(0%, -60%); 
+  }
+}
+
+#videoPlayerBox{
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom:20px;
+}
+#videoPlayer{
+  width:100%;
+  height: 100%;
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-timing-function: ease-in;
+	animation-duration: 4s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+  75% {
+    opacity: 0;
+  }
+	100% {
+		opacity: 1;
+	}
 }
 .sort-buttons button {
   margin: 5px;
