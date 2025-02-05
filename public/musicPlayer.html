@@ -13,12 +13,30 @@
     <link rel="icon" href="https://logodix.com/logo/587016.jpg" sizes="32x32" type="image/jpg">
     <link rel="https://logodix.com/logo/587016.jpg" href="apple-icon.png">
   </head>
-  <body>
+  <body class="mpBg">
      <header>
-       <h1>
-         Listen...
+       <h1 class="mpTitle">
+         Listen... <br>
          And Ascend To Mars...
       </h1>
+       
+      <body>
+    <label for="song">Choose your ascension:</label>
+    <select id="song">
+        <option value="https://www.youtube.com/embed/PMivT7MJ41M">That's What I Like</option>
+        <option value="https://www.youtube.com/embed/UqyT8IEBkvY">24K Magic</option>
+        <option value="https://www.youtube.com/embed/OPf0YbXqDm0">Uptown Funk</option>
+        <option value="https://www.youtube.com/embed/LjhCEhWiKXk">Just The Way You Are</option>
+        <option value="https://www.youtube.com/embed/8PTDv_szmL0">Nothin' On You</option>
+    </select>
+    <button class="mpButton" onclick="musicFromMars()">Ascend</button>
+    <br>
+    <div id="videoPlayerBox">
+    <iframe id="videoPlayer" src="https://www.youtube.com/embed/PMivT7MJ41M" frameborder="0" allowfullscreen></iframe>
+      </div> 
+    
+      </body>
+       
     </header>
        <div class="gobackfull">
       <a href="index.html" class="gobacklinks">Home</a>
