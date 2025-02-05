@@ -148,7 +148,7 @@ const discography = [ //arrays that contain objects of his albums/singles and th
     color: '#291b17',
     textColor: '#f1ede9',
     songs: [
-      "Click on the Covers to keep going"
+      {title:"Click on the Covers to keep going"}
     ]
   }
 ]; 
@@ -382,3 +382,9 @@ function sortStreams(order) {
   });
   displayAlbums(sortedStreams);
 }
+
+// Function to play the songs
+ function musicFromMars() {
+            let ytUrl = document.getElementById("song").value;
+            document.getElementById("videoPlayer").src = ytUrl;
+        }
